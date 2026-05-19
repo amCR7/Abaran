@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0a1928 0%, #1a2a3a 100%);
+    color: #e2e8f0;
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Encabezado */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(255, 215, 150, 0.05);
+    border-radius: 2rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 215, 150, 0.2);
+}
+
+.coat-of-arms {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.crown {
+    font-size: 2.5rem;
+}
+
+.shield {
+    font-size: 2rem;
+    background: #1e3a5f;
+    padding: 0.2rem 0.8rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #f3e6c8, #c9a87b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    margin: 0.5rem 0;
+}
+
+.subtitle {
+    color: #a0b8cc;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 1.2rem;
+    color: #c9a87b;
+    margin-bottom: 1rem;
+}
+
+.light-text {
+    color: #7a8e9e;
+    font-size: 0.9rem;
+}
+
+.badge {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #b0c4de;
+}
+
+/* Cards y secciones */
+.card {
+    background: rgba(20, 35, 50, 0.7);
+    backdrop-filter: blur(5px);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid rgba(255, 215, 150, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 215, 150, 0.3);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #f3e6c8;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Fortuna stats */
+.fortune-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.stat {
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+}
+
+.stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #c9a87b;
+    font-family: 'Playfair Display', serif;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #a0b8cc;
+}
+
+.fortune-text {
+    text-align: center;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 215, 150, 0.2);
+}
+
+/* Logros */
+.achievement {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+}
+
+.achievement:hover {
+    background: rgba(255, 215, 150, 0.05);
+    transform: translateX(5px);
+}
+
+.achievement-icon {
+    font-size: 2.5rem;
+    min-width: 60px;
+    text-align: center;
+}
+
+.achievement-content h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #e2c28b;
+    margin-bottom: 0.25rem;
+}
+
+.achievement-year {
+    font-size: 0.8rem;
+    color: #7a9aba;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.achievement-content p {
+    font-size: 0.95rem;
+    color: #cbd5e0;
+}
+
+/* Cita */
+.quote {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: rgba(201, 168, 123, 0.1);
+    border-radius: 1rem;
+    text-align: center;
+    font-style: italic;
+    border-left: 3px solid #c9a87b;
+}
+
+.quote p:first-child {
+    font-size: 1.2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.quote-author {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    font-style: normal;
+    color: #a0b8cc;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 215, 150, 0.2);
+    font-size: 0.75rem;
+    color: #6a7e8e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    .achievement {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .achievement-icon {
+        text-align: left;
+    }
+    
+    .badge {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .fortune-stats {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+}
