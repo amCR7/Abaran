@@ -1,0 +1,334 @@
+/* Estilos específicos para el blog de viajes */
+.blog-body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9edf2 100%);
+    padding: 0;
+}
+
+.blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header del blog */
+.blog-header {
+    background: linear-gradient(135deg, #1e3a5f 0%, #0d2137 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: 0 0 2rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.blog-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin: 1rem 0 0.5rem;
+    color: white;
+}
+
+.blog-subtitle {
+    color: #e2c8a3;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-avatar {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #e2c8a3;
+}
+
+.blog-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.blog-stats span {
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.1);
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+}
+
+.blog-stats i {
+    margin-right: 0.5rem;
+    color: #e2c8a3;
+}
+
+/* Navegación del blog */
+.blog-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.blog-nav a {
+    color: #1e3a5f;
+    text-decoration: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 25px;
+    background: white;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+}
+
+.blog-nav a:hover, .blog-nav a.active {
+    background: #1e3a5f;
+    color: white;
+}
+
+/* Grid de posts */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.blog-post {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.blog-post.featured {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+    .blog-post.featured {
+        grid-column: span 1;
+        display: block;
+    }
+}
+
+.post-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.post-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.blog-post:hover .post-image img {
+    transform: scale(1.05);
+}
+
+.post-featured, .post-private {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #e2c8a3;
+    color: #1a2a3a;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.post-private {
+    background: #1e3a5f;
+    color: white;
+}
+
+.post-content {
+    padding: 1.5rem;
+}
+
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.post-meta i {
+    margin-right: 0.3rem;
+}
+
+.post-category {
+    background: #f0f0f0;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+}
+
+.post-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+    border: none;
+    color: #1e3a5f;
+}
+
+.post-content p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin: 0.8rem 0;
+}
+
+.post-stats {
+    display: flex;
+    gap: 1rem;
+    margin: 0.8rem 0;
+    font-size: 0.8rem;
+    color: #9ca3af;
+}
+
+.post-stats i {
+    margin-right: 0.3rem;
+}
+
+.read-more {
+    color: #c9a87b;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Mapa de viajes */
+.travel-map {
+    background: white;
+    margin: 3rem 1rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.travel-map h3 {
+    color: #1e3a5f;
+    margin-bottom: 1rem;
+}
+
+.map-placeholder {
+    background: #e9f0f5;
+    border-radius: 0.8rem;
+    padding: 2rem;
+    position: relative;
+    min-height: 300px;
+}
+
+.map-grid {
+    position: relative;
+    background: url('https://placehold.co/800x300/ccddee/ffffff?text=Mapa+Mundial') center/cover no-repeat;
+    height: 250px;
+    border-radius: 0.5rem;
+}
+
+.map-dot {
+    position: absolute;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.map-dot:hover {
+    transform: scale(1.2);
+}
+
+.map-note {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+/* Footer del blog */
+.blog-footer {
+    background: #1a2a3a;
+    color: #a0b8cc;
+    margin-top: 3rem;
+    padding: 2rem 1rem 1rem;
+}
+
+.blog-footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h4 {
+    color: #e2c8a3;
+    margin-bottom: 0.8rem;
+}
+
+.footer-section p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: #e2c8a3;
+    font-size: 1.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #2a3a4a;
+    font-size: 0.7rem;
+}
+
+.footer-bottom a {
+    color: #e2c8a3;
+}
+
+/* Back to top */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #1e3a5f;
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.back-to-top:hover {
+    background: #c9a87b;
+    transform: translateY(-3px);
+}
